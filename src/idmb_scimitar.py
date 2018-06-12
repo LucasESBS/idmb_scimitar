@@ -56,7 +56,7 @@ def imputation( dataframe , frac=0.1):
                                          index=dataframe.index,
                                          columns=dataframe.columns)
     magic_data.fillna(0, inplace=True)
-    magic_data = filter_percent_expressed(magic_data, frac)
+    magic_data = _filter_percent_expressed(magic_data, frac)
     plt.close()
     return magic_data
 
